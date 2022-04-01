@@ -16,11 +16,11 @@ on:
       armbian_soc:
         description: "Input armbian soc"
         required: false
-        default: "s905x3_s905d"
+        default: "s912"
       armbian_kernel:
         description: "Input armbian kernel"
         required: false
-        default: "5.15.25_5.4.180"
+        default: "5.15.32"
       armbian_size:
         description: "Input armbian size"
         required: false
@@ -85,7 +85,7 @@ jobs:
           echo "ARMBIAN_RELEASE=${set_release}" >> $GITHUB_ENV
 
       - name: Rebuild Armbian for Amlogic s9xxx
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: danuzz/amlogic-s9xxx-armbian@main
         if: env.ARMBIAN_URL != '' && !cancelled()
         with:
           armbian_path: ${{ env.ARMBIAN_URL }}
