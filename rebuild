@@ -325,7 +325,7 @@ confirm_version() {
         ANDROID_UBOOT=""
         ;;
     s912 | h96proplus | octopus)
-        FDTFILE="meson-gxm-beelink-gt1.dtb"
+        FDTFILE="meson-gxm-q200-mod.dtb"
         UBOOT_OVERLOAD="u-boot-zyxq.bin"
         MAINLINE_UBOOT=""
         ANDROID_UBOOT=""
